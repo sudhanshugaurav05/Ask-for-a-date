@@ -11,7 +11,7 @@ function getRandomNumber(min, max) {
   return randomNumber;
 }
 
-btnNo.addEventListener("mouseover", (event) => {
+btnNo.addEventListener("mouseover", (e) => {
   const containerHeight = container.getBoundingClientRect().height;
   const containerWidth = container.getBoundingClientRect().width;
   const btnHeight = btnNo.getBoundingClientRect().height;
@@ -21,11 +21,11 @@ btnNo.addEventListener("mouseover", (event) => {
 
   let newTop = btnTop;
   let newLeft = btnLeft;
-  while (Math.abs(newTop - btnTop) < containerHeight / 3) {
+  while (Math.abs(newTop - btnTop) < containerHeight / 7) {
     newTop = getRandomNumber(0, containerHeight - btnHeight);
   }
 
-  while (Math.abs(newLeft - btnLeft) < containerWidth / 3) {
+  while (Math.abs(newLeft - btnLeft) < containerWidth / 7) {
     newLeft = getRandomNumber(0, containerWidth - btnWidth);
   }
 
@@ -35,6 +35,7 @@ btnNo.addEventListener("mouseover", (event) => {
 
 btnYes.addEventListener("click", (e) => {
   btnNo.classList.add("hide");
+  btnYes.classList.add("hide");
   imageOne.classList.add("hide");
   imageTwo.classList.remove("hide");
 });

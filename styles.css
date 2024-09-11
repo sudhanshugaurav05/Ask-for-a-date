@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -12,17 +13,27 @@ body {
   padding: 2rem;
   width: 100%;
   min-height: 100vh;
-  background-image: linear-gradient(to right bottom, #cffafe, #22d3ee);
+  background-image: linear-gradient(to right bottom, #ff65e0, #f61576);
   display: flex;
   flex-direction: column;
+  font-family: "Playwrite CU", cursive;
 }
-
-.header-img {
+.question{
+  position: relative;
   display: flex;
-  width: 100%;
-  max-width: 600px;
-  margin-inline: auto;
-  filter: drop-shadow(5px 5px 20px rgba(0, 0, 0, 0.2));
+  margin-top: 2vw;
+  justify-content: center;
+  align-items: center;
+  height: 10vw;
+  width: 40vw;
+  left: 28vw
+}
+.question h1{
+  text-align: center;
+  line-height: 1.5;
+  font-size: 3vw;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  color: #7e0089;
 }
 
 .container {
@@ -67,7 +78,6 @@ body {
 
 .btn:hover {
   background-color: #e2e8f0;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .btn-yes {
@@ -80,4 +90,31 @@ body {
   left: calc(50% + 1rem);
   transition: all 0.5s ease;
   z-index: 2;
+}
+@media(max-width:800px){
+  body{
+    background: linear-gradient(to bottom,  #ef5f9d , #c50176, #c50101);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .question{
+    display: inline;
+    position: relative;
+    left: 1vw;
+    width: 80vw;
+  }
+  .question h1{
+    font-size: 5vw;
+    text-align: center;
+    line-height: 3;
+  }
+  .btn{
+    color: #c50101;
+    text-shadow: 2px 2px 5px black;
+    background-color: #ff65e0;
+    box-shadow: 2px 2px 15px black;
+    font-weight: 600;
+  }
 }
